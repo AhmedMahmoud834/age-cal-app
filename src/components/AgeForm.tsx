@@ -113,7 +113,13 @@ const AgeForm = ({ setResult }: AgeFormProp) => {
   };
 
   return (
-    <form action={handleSubmit} className="">
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleSubmit();
+      }}
+      className=""
+    >
       <div className="grid grid-cols-3 gap-4 md:w-[70%]">
         <div className="flex flex-col gap-2 text-[hsl(0,0%,8%)]">
           <label
