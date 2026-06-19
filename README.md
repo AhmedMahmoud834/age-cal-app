@@ -1,73 +1,45 @@
-# React + TypeScript + Vite
+# Age Calculator App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive web application designed to calculate age with high accuracy. It provides a fast user interface and a seamless experience, featuring full support for strict date validation and leap year handling, along with a back-end server for data processing.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Front-end:** React, TypeScript, Vite, Tailwind CSS / CSS
+- **Back-end:** Node.js
+- **Development Tools:** ESLint, Prettier
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Accurate Calculations:** Precise date input with strict validation to prevent logical errors and invalid dates.
+- **Leap Year Support:** Capable of handling complex date calculations and automatically adjusting for leap years.
+- **High Performance:** Fast hot-module replacement and quick rendering powered by Vite.
+- **Data Management:** Front-end integration with a Node.js back-end server to organize and handle data securely.
+- **Clean Codebase:** Utilizes TypeScript to ensure code quality, maintainability, and type safety.
 
-## Expanding the ESLint configuration
+## Installation & Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. **Clone the repository:**
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+  git clone [https://github.com/AhmedMahmoud834/age-cal-app.git](https://github.com/AhmedMahmoud834/age-cal-app.git)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Navigate to the project directory:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+  cd age-cal-app
 ```
+
+2. **Install dependencies:**
+```bash
+  npm install
+```
+
+3. **Start the development server:**
+```bash
+  npm run dev
+```
+## Project Structure
+
+The project relies on the standard Vite and React structure. The front-end source files are located inside the src directory, and TypeScript configurations are managed through the tsconfig files.
+
